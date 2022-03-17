@@ -1,22 +1,111 @@
 
-/* font-family: 'Inter', sans-serif;
-font-family: 'Lexend Deca', sans-serif; */
-
 :root {
-        /* main background */
     --very-dark-blue: hsl(233, 47%, 7%);
-        /* card background */
     --dark-desaturated-blue: hsl(244, 38%, 16%);
-    /* accent */
     --soft-violet: hsl(277, 64%, 61%);
     /* main heading, stats */
     --white: hsl(0, 0%, 100%);
-    /* main paragraph */
     --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
     /* stat headings */
     --transparent-white: hsla(0, 0%, 100%, 0.6);
+
+    font-size: 15px;
 }
 
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-dark-blue);
+    color: var(--slightly-transparent-white);
+    font-family: 'Inter', sans-serif;
+}
+
+.card {
+    width: 23rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-desaturated-blue);
+    border-radius: .65rem;
+    padding-top: 1rem;
+}
+
+.banner {
+    position: relative;
+}
+
+.layer {
+    background-color: hsla(277, 84%, 31%, 0.575);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+}
+
+#banner-mobile {
+    width: 23rem;
+    border-top-left-radius: .65rem;
+    border-top-right-radius: .65rem;
+} 
+
+#banner-desktop {
+    display: none;
+}
+
+.content {
+    width: 17rem;
+    text-align: center;
+}
+
+h2 {
+    color: var(--white);
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h2 span  {
+    color: var(--soft-violet);
+}
+
+.description  {
+    line-height: 1.65rem;
+}
+
+
+.stats {
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.stat {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    font-size: .75rem;
+    padding: .5rem;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.stat span {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.stat p {
+    text-transform: uppercase;
+    color: var(--transparent-white);
+    margin: .5rem;
+    letter-spacing: .1rem;
+    font-size: .9rem;
+}
 
 
 
@@ -26,4 +115,17 @@ font-family: 'Lexend Deca', sans-serif; */
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+
+
+
+@media only screen and (min-width: 1440px) {
+    #banner-desktop {
+        display: block;
+    }
+
+    #banner-mobile {
+        display: none;
+    }
 }
